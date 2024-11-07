@@ -2,6 +2,7 @@
 *.tfstate.*
 *.terraform/
 
+old/
 
 override.tf
 override.tf.json

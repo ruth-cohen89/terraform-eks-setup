@@ -1,0 +1,29 @@
+# server:
+#   name: "argocd-server"
+#   configEnabled: true
+#   service:
+#     type: ClusterIP # Change this to LoadBalancer once your ALB or ELB is configured
+#     port: 80
+#     targetPort: 8080
+
+#   ingress:
+#     enabled: true # check again after adding alb
+#   replicas: 1
+
+# controller:
+#   resources:
+#     requests:
+#       memory: "512Mi"
+#       cpu: "500m"
+#     limits:
+#       memory: "1Gi"
+#       cpu: "1"
+
+# repoServer:
+#   resources:
+#     requests:
+#       memory: "256Mi"
+#       cpu: "250m"
+#     limits:
+#       memory: "512Mi"
+#       cpu: "500m"

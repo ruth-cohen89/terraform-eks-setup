@@ -1,4 +1,16 @@
+provider "helm" {
+  kubernetes {
+    config_path = "~/.kube/config"
+  }
+  
+}
+
+provider "kubernetes" {
+  config_path = "~/.kube/config"
+}
+
+
 provider "aws" {
-  region = "il-central-1" 
+  region = var.region
 }
 

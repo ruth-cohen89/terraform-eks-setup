@@ -14,5 +14,15 @@ terraform {
 }
 
 
+resource "kubernetes_namespace" "ingress_nginx" {
+  metadata {
+    name = "ingress-nginx"
+  }
+}
+
+resource "kubernetes_manifest" "nginx_ingress_controller" {
+  depends_on = [kubernetes_namespace.ingress_nginx]
+  manifest = yamldecode(file("./nginx-ingress-controller.yaml"))
+}
 
 
